@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="dist/css/swiper.min.css"/>
+    <script src="script/fontsize.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!--页面头部header-->
+    <header class="top">
+    <!--jd图片logo-->
+    <div class="logo"></div>
+    <!--文本框-->
+    <div class="txt">
+        <input type="text" placeholder="提示站位"/>
+        <div class="search"></div>
+    </div>
+    <!--登录-->
+    <a href="" class="login">登录</a>
+</header>
+    <!--页面轮播图banner-->
+    <div class="swiper-container">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/l1.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/l2.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/l3.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/l4.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/l5.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/l6.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/l7.jpg" alt=""/></div>
+            <div class="swiper-slide"><img src="images/l8.jpg" alt=""/></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--分类main-->
+    <div class="main">
+        <ul class="list">
+            <li><img src="images/nav0.png" alt=""/> <a href="">分类查询</a></li>
+            <li><img src="images/nav1.png" alt=""/> <a href="">分类查询</a></li>
+            <li><img src="images/nav2.png" alt=""/> <a href="">分类查询</a></li>
+            <li><img src="images/nav3.png" alt=""/> <a href="">分类查询</a></li>
+            <li><img src="images/nav4.png" alt=""/> <a href="">分类查询</a></li>
+            <li><img src="images/nav5.png" alt=""/> <a href="">分类查询</a></li>
+            <li><img src="images/nav6.png" alt=""/> <a href="">分类查询</a></li>
+            <li><img src="images/nav7.png" alt=""/> <a href="">分类查询</a></li>
+        </ul>
+    </div>
+    <!--限时秒杀-->
+    <section>
+        <div class="zsms">
+            <div class="zz">
+                <img src="images/seckill-icon.png" alt=""/>
+            </div>
+            <p>掌上秒杀</p>
+
+
+            <span class="h1"></span>
+            <span class="h2"></span>
+            :
+            <span class="m1"></span>
+            <span class="m2"></span>
+            :
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <a href="">更多></a>
+            </div>
+            <div class="pic">
+                <ul>
+                    <li><img src="images/detail01.jpg" alt=""/><a href="">￥10.00</a><p>￥100.00</p></li>
+                    <li><img src="images/detail02.jpg" alt=""/><a href="">￥10.00</a><p>￥100.00</p></li>
+                    <li><img src="images/detail01.jpg" alt=""/><a href="">￥10.00</a><p>￥100.00</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--京东超市-->
+    <div class="jdcs">
+        <div class="jdcs_top">
+            <p>京东超市</p>
+            <div class="jdcs_pic">
+                <img src="images/cp1.jpg" alt=""/>
+            </div>
+            <div class="jdcs_pic1">
+                <img src="images/cp2.jpg" alt=""/>
+            </div>
+            <div class="jdcs_pic2">
+                <img src="images/cp3.jpg" alt=""/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="jdcs">
+        <div class="jdcs_top">
+            <p>京东超市</p>
+            <div class="jdcs_pic">
+                <img src="images/cp4.jpg" alt=""/>
+            </div>
+            <div class="jdcs_pic1">
+                <img src="images/cp5.jpg" alt=""/>
+            </div>
+            <div class="jdcs_pic2">
+                <img src="images/cp6.jpg" alt=""/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="jdcs">
+        <div class="jdcs_top">
+            <p>京东超市</p>
+            <div class="jdcs_pic">
+                <img src="images/cp1.jpg" alt=""/>
+            </div>
+            <div class="jdcs_pic1">
+                <img src="images/cp2.jpg" alt=""/>
+            </div>
+            <div class="jdcs_pic2">
+                <img src="images/cp3.jpg" alt=""/>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script src="dist/js/swiper.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+//    轮播图
+    var swiper=new Swiper(".swiper-container",{
+        pagination:".swiper-pagination"
+    })
+
+//    倒计时
+    var i=18000 ;  //5个小时
+    setInterval(function(){
+        i=i-1;
+//        转换成正数
+        var h=parseInt(i/3600);
+        var m=parseInt(i%3600/60);
+        var s=i%3600%60;
+        $(".h1").text(parseInt(h/10));
+        $(".h2").text(h%10);
+        $(".m1").text(parseInt(m/10));
+        $(".m2").text(m%10);
+        $(".s1").text(parseInt(s/10));
+        $(".s2").text(s%10);
+    },1000)
+
+</script>
